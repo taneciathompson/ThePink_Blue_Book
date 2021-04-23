@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+  }
+  
+ .header{
+    height: 50px;
+    border: 1px solid black;
+    background-color: blueviolet;
+    font-size: 50px;
+    text-align: center;
+    color: pink;
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .container{
+    height: 600px;
+     width: 100%;
+     border: 1px solid black;
+     float: left;
+     background-color: lightgrey;
+  }
+  .food{
+    height: 174px;
+    width: 24%;
+    border: 1px solid lightblue;
+    display: inline-block;
+    background-color: plum;
+    font-size: 35px;
+    text-align: center;
+  }
+  .fun{
+    height: 174px;
+    width: 25%;
+    border: 1px solid lightblue;
+    display: inline-block;
+    background-color: rebeccapurple;
+    font-size: 35px;
+    text-align: center;
+  }
+  .needs{
+    height: 174px;
+    width: 25%;
+    border: 1px solid lightblue;
+    display: inline-block;
+    background-color: rgb(171, 127, 214);
+    font-size: 35px;
+    text-align: center;
+  }
+  .shelter{
+    height: 174px;
+    width: 25%;
+    border: 1px solid lightblue;
+    display: inline-block;
+    background-color: rgb(187, 118, 255);
+    font-size: 35px;
+    text-align: center;
+  }
+  .resources{
+    height: 200px;
+    width: 50%;
+    border: 1px solid lightblue; 
+    display: inline-block;
+    background-color: plum;
+    font-size: 40px;
+    text-align: center;
+  }
+  .forum{
+    height: 200px;
+    width: 49.5%;
+    border: 1px solid lightblue;
+    background-color:rgb(171, 127, 214);
+    display: inline-block;
+    font-size: 40px;
+    text-align: center;
+  }
+  .help{
+    height: 170px;
+    width: 100%;
+    border: 1px solid lightblue;
+    background-color: rgb(187, 118, 255);
+    font-size: 50px;
+    color: red;
+    text-align: center;
+  }
+ 

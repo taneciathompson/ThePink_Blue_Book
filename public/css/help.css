@@ -1,0 +1,25 @@
+body{
+background-image: url(../img/sayhername_blogpic.png);
+
+}
+.talkHelp{
+    display: block;
+    border-radius: 50%;
+    background-color: blueviolet;
+    color: white;
+    width: 18%;
+    height: 200px;
+    font-size: 40px;
+    margin-left: 587px;
+    margin-top: 20px;
+}
+.immediate{
+    display: block;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    width: 18%;
+    height: 200px;
+    font-size: 40px;
+    margin-left: 587px;
+}

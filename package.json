@@ -1,0 +1,37 @@
+{
+  "name": "tpbb",
+  "version": "1.0.0",
+  "description": "A full stack app designed to provide saftey, leisure, and lodging for the transyouth of the Boston area.This project reinforces my understanding on the core concepts of Node.JS and Javascript ES6 features and their applications. I wanted to keep my code as simple as possible. I wanted to do a subtle but interseting to look at theme! The product came out clean, eye catching and fun! I'm excited for the future projects, so stay tuned!",
+  "main": "server.js",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongodb": "^3.6.6",
+    "mongoose": "^5.12.3",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.7",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taneciathompson/ThePink_Blue_Book.git"
+  },
+  "bugs": {
+    "url": "https://github.com/taneciathompson/ThePink_Blue_Book/issues"
+  },
+  "homepage": "https://github.com/taneciathompson/ThePink_Blue_Book#readme"
+}

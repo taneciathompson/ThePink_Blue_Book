@@ -1,0 +1,17 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background-image: url(/public/img/beauty.png);
+}
+.container{
+    text-align: center;
+    color: darkblue;
+}
+h1{
+    text-align: center;
+    font-size: 45px;
+    font-family: 'Dancing Script', cursive;
+}
+.navBar{
+    margin-right: 600px;
+}

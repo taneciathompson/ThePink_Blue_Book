@@ -1,0 +1,40 @@
+h1{
+     text-align: center; 
+     font-size: 40px;
+     font-family: 'Dancing Script', cursive;
+}
+body{
+    background-image:url(../img/story.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    flex-wrap: wrap;
+    height: 395px;
+    width: 853px;
+    margin: auto;
+}
+.box{
+    border: 2px solid purple;
+    background:white;
+}
+.messages{
+    font-size: 15.5px;
+}
+.fa-thumbs-up{
+    color: pink;
+}
+.fa-thumbs-down{
+    color: blue;
+}
+.fa-trash{
+    color: purple;
+}
+h2{
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+}
+form{
+    margin-left: 187px;
+}
