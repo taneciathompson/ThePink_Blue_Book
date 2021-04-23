@@ -4,7 +4,7 @@
   "description": "A full stack app designed to provide saftey, leisure, and lodging for the transyouth of the Boston area.This project reinforces my understanding on the core concepts of Node.JS and Javascript ES6 features and their applications. I wanted to keep my code as simple as possible. I wanted to do a subtle but interseting to look at theme! The product came out clean, eye catching and fun! I'm excited for the future projects, so stay tuned!",
   "main": "server.js",
   "dependencies": {
-    "bcrypt-nodejs": "0.0.3",
+    "bcrypt-nodejs": "^0.0.3",
     "body-parser": "^1.19.0",
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.5",
@@ -18,7 +18,6 @@
     "passport": "^0.4.1",
     "passport-local": "^1.0.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
