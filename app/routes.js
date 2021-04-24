@@ -10,19 +10,18 @@ module.exports = function(app, passport, db) {
              res.render('home.ejs');
          });
         // app.get('/login', function(req, res) {
-        //   res.render('login.ejs');
-        // });
+        //   res.render('login.ejs');        // });
         // app.get('/signup', function(req, res) {
         //   res.render('signUp.ejs');
         // });
     
         // PROFILE SECTION =========================
         app.get('/main', isLoggedIn, function(req, res) {
-            db.collection('messages').find().toArray((err, result) => {
+            db.collection('admin').find().toArray((err, result) => {
               if (err) return console.log(err)
               res.render('main.ejs', {
                 user : req.user,
-                messages: result
+                pages: result.pages
               })
             })
         });
@@ -85,7 +84,7 @@ app.get('/needs', isLoggedIn, function(req, res) {
       app.get('/messages', isLoggedIn, function(req, res) {
         db.collection('messages').find().toArray((err, result) => {
           if (err) return console.log(err)
-          res.render('messages.ejs', {
+          res.render('messages.ejs', {z
             user : req.user,
             messages: result
           })

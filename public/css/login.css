@@ -82,4 +82,14 @@
     color: red;
     text-align: center;
   }
+
+  .container{
+    width:100%;
+    display:flex;
+    justify-content: center;
+  }
+
+  .box{
+    width:30%;    
+  }
  
