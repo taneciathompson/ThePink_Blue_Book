@@ -11,12 +11,16 @@
     <link rel="stylesheet" href="../css/forum.css">
 </head>
 <body>
-    <section class="navBar">
-        <a class="home" href="/views/home">Home</a>
-        <a class="welcome" href="/index">Welcome!</a>
+  <section class="navBar">
+    <a class="home" href="/home">Home</a>
+    <a class="welcome" href="/main">Welcome!</a>
+    <% if(user) { %>
+        <a class="logout" href="/">Log-out</a>
+    <% } else {%>       
         <a class="signUp" href="/signUp">Sign-Up</a>
         <a class="login" href="/login">Log-In</a>
-        <a class="logout" href="/">Log-out</a>
+    <% } %>
+</section>
 <div class="container">
 
     <div class="page-header text-center">

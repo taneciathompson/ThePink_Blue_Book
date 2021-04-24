@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/admin.css">
+    <title>The Pink&Blue Book</title>
+</head>
+<body>
+
+    <section class="navBar">
+        <a class="home" href="/home">Home</a>
+        <a class="welcome" href="/main">Welcome!</a>
+        <% if(user) { %>
+            <a class="logout" href="/">Log-out</a>
+        <% } else {%>       
+            <a class="signUp" href="/signUp">Sign-Up</a>
+            <a class="login" href="/login">Log-In</a>
+        <% } %>
+    </section>
+
+    <main> 
+        <section class="heading">
+            <h1>Pages</h1>
+
+            <section class="Food">
+                <% if(pages.food) { %>
+                    <% for(var i=0; i < pages.food.length; i++) {%>
+                          <span><%= pages.food[i] %></span>
+                      <% } %>
+                <% } else {%>       
+                    <span>"No pages are currently listed</span>
+                <% } %>
+            </section >
+
+            <section class="Fun">
+                <% if(pages.fun) { %>
+                
+                <% } else {%>       
+    
+                <% } %>
+            </section>
+
+            <section class="Needs">
+                <% if(pages.needs) { %>
+                
+                <% } else {%>       
+        
+                <% } %>
+            </section>
+
+            <section class="Resources">
+                <% if(pages.resources) { %>
+                
+                <% } else {%>       
+        
+                <% } %>
+            </section>
+
+            <section class="Shelter">
+                <% if(pages.shelter) { %>
+                
+                <% } else {%>       
+        
+                <% } %>
+            </section>
+
+        </section> 
+
+        <section class="addPage">
+            <input class="siteName" type="text" placeholder="Website name">
+            <input class="siteLink" type="text" placeholder="link to site">
+            <label for="pages">Add new link to which page?</label>
+            <select name="pages" id="pages">
+                <option value="food">Food</option>
+                <option value="fun">Fun</option>
+            </select>
+            <button class="addNewPage">submit</button>
+        </section>
+        
+    </main>
+    
+
+
+          
+    
+    <script src="admin.js"></script>
+</body>
+</script>
+</html>

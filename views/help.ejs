@@ -11,11 +11,14 @@
 </head>
 <body>
     <section class="navBar">
-        <a class="home" href="./home">Home</a>
-        <a class="welcome" href="./main">Welcome!</a>
-        <a class="signUp" href="./signUp">Sign-Up</a>
-        <a class="login" href="./login">Log-In</a>
-        <a class="logout" href="/">Log-out</a>
+        <a class="home" href="/home">Home</a>
+        <a class="welcome" href="/main">Welcome!</a>
+        <% if(user) { %>
+            <a class="logout" href="/">Log-out</a>
+        <% } else {%>       
+            <a class="signUp" href="/signUp">Sign-Up</a>
+            <a class="login" href="/login">Log-In</a>
+        <% } %>
     </section>
 
 <button class="talkHelp"><a href="tel:8002738255">Suicide Hotline</a></button><br>
