@@ -37,6 +37,11 @@
                 <div class="column">
                     <div class="card"><a href="https://www.glad.org/">GLAD Legal Advocates & Defenders</a></div>
                 </div>
+                <% for(i=0; i< messages.length;i++) { %>
+                    <div class="column">
+                        <div class="card"><a href="<%= messages[i].link %>"><%= messages[i].name %></a></div>
+                    </div>
+                <% }  %>
             </div></section>
 </body>
 </html>

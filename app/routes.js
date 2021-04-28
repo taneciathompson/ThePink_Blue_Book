@@ -1,4 +1,7 @@
+const { ObjectId } = require('bson');
+const { ObjectID } = require('bson');
 const User = require('./models/user')
+// import { db } from "../app/models/user"
 module.exports = function (app, passport, db) {
 
   // normal routes ===============================================================
@@ -6,7 +9,7 @@ module.exports = function (app, passport, db) {
   // show the home page (will also have our login links)
   app.get('/', function (req, res) {
     res.render('index.ejs', {
-      user: req.user,
+      user: req.user
     })
   });
   app.get('/home', function (req, res) {
@@ -48,7 +51,7 @@ module.exports = function (app, passport, db) {
     })
   });
   app.get('/shelter', isLoggedIn, function (req, res) {
-    db.collection('messages').find().toArray((err, result) => {
+    db.collection('shelter').find().toArray((err, result) => {
       if (err) return console.log(err)
       res.render('shelter.ejs', {
         user: req.user,
@@ -57,7 +60,7 @@ module.exports = function (app, passport, db) {
     })
   });
   app.get('/food', isLoggedIn, function (req, res) {
-    db.collection('messages').find().toArray((err, result) => {
+    db.collection('food').find().toArray((err, result) => {
       if (err) return console.log(err)
       res.render('food.ejs', {
         user: req.user,
@@ -66,7 +69,7 @@ module.exports = function (app, passport, db) {
     })
   });
   app.get('/fun', isLoggedIn, function (req, res) {
-    db.collection('messages').find().toArray((err, result) => {
+    db.collection('fun').find().toArray((err, result) => {
       if (err) return console.log(err)
       res.render('fun.ejs', {
         user: req.user,
@@ -75,7 +78,7 @@ module.exports = function (app, passport, db) {
     })
   });
   app.get('/resources', isLoggedIn, function (req, res) {
-    db.collection('messages').find().toArray((err, result) => {
+    db.collection('resources').find().toArray((err, result) => {
       if (err) return console.log(err)
       res.render('resources.ejs', {
         user: req.user,
@@ -84,7 +87,7 @@ module.exports = function (app, passport, db) {
     })
   });
   app.get('/needs', isLoggedIn, function (req, res) {
-    db.collection('messages').find().toArray((err, result) => {
+    db.collection('needs').find().toArray((err, result) => {
       if (err) return console.log(err)
       res.render('needs.ejs', {
         user: req.user,
@@ -101,6 +104,18 @@ module.exports = function (app, passport, db) {
         messages: result
       })
     })
+  });
+  app.put('/thumbUp', isLoggedIn, function (req, res) {
+    db.collection('messages').findOneAndUpdate({_id:ObjectId(req.body.id)}, {$set: {thumbUp: req.body.thumbUp+1}},{}, (err,result)=>{ 
+      if (err) return console.log(err)
+      res.redirect('/messages')
+    });
+  });
+  app.put('/thumbDown', isLoggedIn, function (req, res) {
+    db.collection('messages').findOneAndUpdate({_id: ObjectId(req.body.id)}, {$set:{thumbDown: req.body.thumbDown+1}},{}, (err,result)=>{
+      if (err) return console.log(err)
+      res.redirect('/messages')
+    });
   });
   app.get('/need', isLoggedIn, function (req, res) {
     db.collection('messages').find().toArray((err, result) => {
@@ -123,33 +138,13 @@ module.exports = function (app, passport, db) {
     }
   });
 
-  app.get('/newSite', isLoggedIn, async function (req, res) {
-      let sites = req.user.admin
-      const user = await User.findById(req.user._id)
-      switch(sites.query.siteCategory){
-        case 'food':
-          sites.food.push([req.query.siteName, req.query.siteCategory])
-          user.admin = sites
-        case 'fun':
-          // dadada
-          break;
-        case 'shelter':
-          // dadada
-          break;
-        case 'needs':
-          // dadada
-          break;
-        case 'resources':
-          // dadada
-          break;
-      }
-
-      const result = await user.save()
-      .then(result => {
+  app.post('/newSite', isLoggedIn, function (req, res) {
+      let category = req.body.cat
+      db.collection(category).insertOne({name:req.body.name, link:req.body.link}, (err, result)=>{
+        if (err) return console.log(err)
         res.redirect('/admin')
-      })
-      .catch(error => console.error(error))
-  });
+      });
+    });
 
 
   // LOGOUT ==============================
@@ -192,7 +187,7 @@ module.exports = function (app, passport, db) {
         res.send(result)
       })
   })
-  app.put('/thumbDown', (req, res) => {
+  app.put('/thumpDown', (req, res) => {
     db.collection('messages')
       .findOneAndUpdate({
         name: req.body.name,

@@ -1,0 +1,19 @@
+body{
+  padding-top:80px;
+  word-wrap:break-word;
+}
+img{
+  height: 200px;
+}
+body{
+  background:url(/img/loveblocks.png);
+  background-size: cover;
+}
+h1{
+  text-align: center;
+  font-size: 55px;
+  font-family: 'Dancing Script', cursive;
+}
+/* .hidden{
+  display: none;
+} */

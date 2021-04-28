@@ -36,6 +36,11 @@
                 <div class="column">
                     <div class="card"><a href="https://raspberryberet.us/">Raspberry Beret</a></div>
                 </div>
+                <% for(i=0; i< messages.length;i++) { %>
+                    <div class="column">
+                        <div class="card"><a href="<%= messages[i].link %>"><%= messages[i].name %></a></div>
+                    </div>
+                <% }  %>
             </div></section>
     
 </body>

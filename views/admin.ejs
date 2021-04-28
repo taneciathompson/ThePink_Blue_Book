@@ -69,16 +69,19 @@
 
         </section> 
 
-        <section class="addPage">
-            <input class="siteName" type="text" placeholder="Website name">
-            <input class="siteLink" type="text" placeholder="link to site">
+        <form action="/newSite" method="post" class="addPage">
+            <input class="siteName" name="name" type="text" placeholder="Website name">
+            <input class="siteLink" name="link" type="text" placeholder="link to site">
             <label for="pages">Add new link to which page?</label>
-            <select name="pages" id="pages">
+            <select name="cat" id="pages">
                 <option value="food">Food</option>
                 <option value="fun">Fun</option>
+                <option value="needs">Needs</option>
+                <option value="shelter">Shelter</option>
+                <option value="resources">Resources</option>
             </select>
             <button class="addNewPage">submit</button>
-        </section>
+        </form>
         
     </main>
     

@@ -1,7 +1,9 @@
 *{
   box-sizing: border-box;
 }
-
+a{
+  text-decoration: none;
+}
 .header{
   height: 50px;
   border: 1px solid black;
@@ -18,6 +20,7 @@
    border: 1px solid black;
    float: left;
    background-color: lightgrey;
+   border-radius: 9%;
 }
 .food{
   height: 174px;
@@ -27,15 +30,17 @@
   background-color: plum;
   font-size: 35px;
   text-align: center;
+  border-radius: 9%;
 }
 .fun{
   height: 174px;
   width: 25%;
   border: 1px solid lightblue;
   display: inline-block;
-  background-color: rebeccapurple;
+  background-color: rgb(180, 127, 233);
   font-size: 35px;
   text-align: center;
+  border-radius: 9%;
 }
 .needs{
   height: 174px;
@@ -45,6 +50,7 @@
   background-color: rgb(171, 127, 214);
   font-size: 35px;
   text-align: center;
+  border-radius: 9%;
 }
 .shelter{
   height: 174px;
@@ -54,6 +60,7 @@
   background-color: rgb(187, 118, 255);
   font-size: 35px;
   text-align: center;
+  border-radius: 9%;
 }
 .resources{
   height: 200px;
@@ -63,6 +70,7 @@
   background-color: plum;
   font-size: 40px;
   text-align: center;
+  border-radius: 9%;
 }
 .forum{
   height: 200px;
@@ -72,6 +80,7 @@
   display: inline-block;
   font-size: 40px;
   text-align: center;
+  border-radius: 9%;
 }
 .help{
   height: 170px;
@@ -81,4 +90,5 @@
   font-size: 50px;
   color: red;
   text-align: center;
+  border-radius: 9%;
 }

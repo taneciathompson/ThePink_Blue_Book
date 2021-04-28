@@ -1,7 +1,8 @@
 body{
     display: flex;
     flex-direction: column;
-    background-image: url(/public/img/beauty.png);
+    background-image: url(/img/beauty.png);
+    background-size: cover;
 }
 .container{
     text-align: center;
@@ -14,4 +15,9 @@ h1{
 }
 .navBar{
     margin-right: 600px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    
 }

@@ -1,3 +1,5 @@
+
+
 document.querySelector('.addNewPage').addEventListener('click', addPage)
 
 async function addPage(){
@@ -5,10 +7,12 @@ async function addPage(){
     const siteLink = document.querySelector('.siteLink').value
     const siteCategory =document.querySelector('#pages').value
 
-    // console.log(siteName, siteLink, siteCategory)
+    console.log(siteName, siteLink, siteCategory)
 
     const result = await fetch(`/newSite?siteName=${siteName}&siteLink=${siteLink}&siteCategory=${siteCategory}`)
     // const text = result.text()
-    // console.log(text)
+    db.food.update(
+        { $push: {[this.siteName]: this.siteLink } }
+    )
     
 }

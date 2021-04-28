@@ -38,3 +38,10 @@ h2{
 form{
     margin-left: 187px;
 }
+.hidden{
+    display: none;
+}
+ul{
+    color: purple;
+    font-size: 25px;
+  }

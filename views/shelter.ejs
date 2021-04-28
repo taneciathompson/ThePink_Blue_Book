@@ -38,6 +38,11 @@
                 <div class="column">
                     <div class="card"><a href="http://www.bridgeotw.org/">Bridge Over troubled Waters</a></div>
                 </div>
+                <% for(i=0; i< messages.length;i++) { %>
+                    <div class="column">
+                        <div class="card"><a href="<%= messages[i].link %>"><%= messages[i].name %></a></div>
+                    </div>
+                <% }  %>
             </div></section>
     
 </body>
