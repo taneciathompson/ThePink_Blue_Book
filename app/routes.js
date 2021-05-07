@@ -239,16 +239,16 @@ module.exports = function (app, passport, db) {
 
   // SIGNUP =================================
   // show the signup form
-  app.get('/signup', function (req, res) {
-    res.render('signup.ejs', {
+  app.get('/signUp', function (req, res) {
+    res.render('signUp.ejs', {
       message: req.flash('signupMessage')
     });
   });
 
   // process the signup form
-  app.post('/signup', passport.authenticate('local-signup', {
+  app.post('/signUp', passport.authenticate('local-signup', {
     successRedirect: '/main', // redirect to the secure profile section
-    failureRedirect: '/signup', // redirect back to the signup page if there is an error
+    failureRedirect: '/signUp', // redirect back to the signup page if there is an error
     failureFlash: true // allow flash messages
   }));
 
